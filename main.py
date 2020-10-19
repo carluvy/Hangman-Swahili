@@ -1,6 +1,5 @@
 import time
 from random_words import RandomWords
-import random
 
 
 def hangman():
@@ -17,7 +16,6 @@ def hangman():
 
     words = RandomWords()
     word = words.random_word()
-    print(word)
 
     # create a variable with an empty value
     guesses = ''
@@ -60,12 +58,13 @@ def hangman():
             turns -= 1
             print('Wrong')
 
-        # how many turns are lefy
+            # how many turns are lefy
             print('You have', + turns, 'more guesses')
-        # if the turns are equal to zero
+            # if the turns are equal to zero
             if turns == 0:
                 # print you lose
-                print( 'You Lose')
+                print('You Lose')
+                print(word)
 
 
 hangman()
